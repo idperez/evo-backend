@@ -1,4 +1,4 @@
-let mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 let Schema = mongoose.Schema;
 
@@ -15,7 +15,8 @@ let userSchema = new Schema({
 
     password: {
         type: String,
-        required: true
+        required: true,
+        bcrypt: true
     },
 
     joined_at: {
@@ -24,6 +25,8 @@ let userSchema = new Schema({
     }
 });
 
-let User = mongoose.model("User", userSchema);
+userSchema.plugin(require('mongoose-bcrypt'));
+
+const User = mongoose.model('User', userSchema);
 
 module.exports = User;

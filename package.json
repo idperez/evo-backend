@@ -10,7 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.16.2",
-    "mongojs": "^2.4.1",
-    "mongoose": "^5.0.0-rc0"
+    "mongoose": "^5.0.0-rc0",
+    "mongoose-bcrypt": "^1.5.0"
   }
 }
