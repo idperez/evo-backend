@@ -1,5 +1,4 @@
 const express = require('express');
-const session = require('express-session');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
@@ -14,12 +13,6 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.use(bodyParser.json());
-
-app.use(session({
-    secret: 'sid the man',
-    resave: true,
-    saveUninitialized: true
-}));
 
 const routes = require('./routes');
 
