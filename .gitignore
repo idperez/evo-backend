@@ -3,6 +3,3 @@
 
 # jetbrains
 .idea/
-
-# api keys
-/config/secret.js
